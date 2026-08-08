@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinkedIn Search Scraper — worker</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        max-width: 40rem;
+        margin: 2rem auto;
+        padding: 0 1.25rem;
+        line-height: 1.5;
+        color: #1a1a1a;
+      }
+      h1 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; }
+      p { margin: 0.75rem 0; color: #333; }
+      dl {
+        margin-top: 1.5rem;
+        padding: 1rem;
+        background: #f4f4f4;
+        border-radius: 6px;
+        font-size: 0.875rem;
+      }
+      dt { font-weight: 600; margin-top: 0.5rem; }
+      dt:first-child { margin-top: 0; }
+      dd { margin: 0.15rem 0 0; font-family: ui-monospace, monospace; word-break: break-all; }
+      .warn { color: #6b4a00; background: #fff8e6; padding: 0.75rem 1rem; border-radius: 6px; }
+    </style>
+  </head>
+  <body>
+    <h1>LinkedIn Search Scraper — worker</h1>
+    <p>
+      The extension uses this minimized window to open LinkedIn tabs in the background.
+      Leave it minimized — you do not need to interact with it.
+    </p>
+    <p class="warn">
+      Closing this window mid-sync may interrupt a crawl. The extension will recreate it on the next action.
+    </p>
+    <dl>
+      <dt>Manifest version</dt>
+      <dd id="manifest-version">…</dd>
+      <dt>EXTENSION_VERSION</dt>
+      <dd id="ext-version">…</dd>
+      <dt>Build time</dt>
+      <dd id="build-time">…</dd>
+      <dt>Extension ID</dt>
+      <dd id="ext-id">…</dd>
+    </dl>
+    <script type="module" src="./worker-page.ts"></script>
+  </body>
+</html>

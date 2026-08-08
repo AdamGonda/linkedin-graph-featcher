@@ -1,0 +1,30 @@
+---
+description: Format and evolution of Cursor rules for this repo
+globs: ".cursor/rules/*.mdc,AGENTS.md"
+alwaysApply: false
+---
+
+# Cursor rules workflow
+
+Use when editing project rules or [AGENTS.md](mdc:AGENTS.md).
+
+## Rule structure
+
+```markdown
+---
+description: Clear one-line description
+globs: path/to/files/*.ext
+alwaysApply: false
+---
+
+# Title
+
+Actionable bullets. Prefer ✅ DO / ❌ DON'T when it clarifies.
+```
+
+## Conventions
+
+- One concern per rule; keep under ~100 lines when possible.
+- Link with `[name](mdc:path)` instead of duplicating long tables from [AGENTS.md](mdc:AGENTS.md).
+- Add a rule when a pattern appears in 3+ places, reviews keep repeating it, or a bug class is preventable by a checklist.
+- Update stack/layout in AGENTS.md when the project is bootstrapped — do not invent a parallel source of truth.

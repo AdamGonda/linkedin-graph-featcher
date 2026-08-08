@@ -1,0 +1,38 @@
+# Dependencies & build
+node_modules/
+dist/
+build/
+.next/
+out/
+coverage/
+.turbo/
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
+
+# Secrets & sessions
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+cookies*
+*cookie*
+*session*
+li_at*
+storage_state*
+auth.json
+credentials.json
+
+# Local graph data
+data/
+dumps/
+exports/
+*.ndjson
+*.graph.json
+
+# OS / editor
+.DS_Store
+*.log

@@ -1,0 +1,28 @@
+---
+description: LinkedIn Search Scraper — product context and hard constraints
+alwaysApply: true
+---
+
+# LinkedIn Search Scraper
+
+Chrome extension that scrapes LinkedIn people-search results from a filter URL and exports JSON. Full orientation: [AGENTS.md](mdc:AGENTS.md).
+
+## Priorities
+
+- Prefer official / user-authorized data paths over scraping.
+- Incremental sync + cache; never hammer LinkedIn.
+- Keep auth material and dumped data out of the repo and out of chat logs.
+
+## Do not
+
+- Commit or echo cookies, `li_at`, OAuth tokens, or `.env` values.
+- Check in large `data/` / dump files.
+- Add frameworks or abstractions before the first working fetch path exists.
+
+## Stack (bootstrapped)
+
+Chrome MV3 + TypeScript/React (Vite/CRXJS). See [AGENTS.md](mdc:AGENTS.md) and [linkedin-crawl.mdc](mdc:linkedin-crawl.mdc).
+
+## When changing stack
+
+Update [AGENTS.md](mdc:AGENTS.md) stack table and add focused rules (one concern per `.mdc`) instead of bloating this file.

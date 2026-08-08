@@ -1,0 +1,14 @@
+---
+description: LinkedIn crawl safety for the Chrome extension
+globs: ["src/**/*.ts", "src/**/*.tsx", "manifest.json"]
+alwaysApply: false
+---
+
+# LinkedIn crawl safety
+
+- Never log, echo, or persist cookie/token *values* (`li_at`, CSRF, etc.). Existence checks only.
+- Open LinkedIn tabs via the minimized worker window (`createWorkerTab`), not the user's focused window.
+- Default sync to paused; require explicit user action to crawl.
+- One crawl tab at a time; randomized delays between actions; stop on login/checkpoint/authwall/rate-limit.
+- Prefer incremental sync + resume cursors over full re-fetches.
+- Graph payloads go to IndexedDB / local `data/` — never commit dumps.
